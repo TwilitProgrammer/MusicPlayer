@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA54A2F0-4EEC-4547-A827-4D1037268B0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Music_Player</RootNamespace>
+    <AssemblyName>Zelda Player</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>I:\Zelda Player\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8CCCE7B4921037E46BDF7DAA71C830061EC23F22</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Music Player_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Ocarina_of_Time2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WiimoteLib, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\C# Dlls\WiimoteLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Song.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SongForm.Designer.cs">
+      <DependentUpon>SongForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SongForm.resx">
+      <DependentUpon>SongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Music Player_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ocarina_of_Time1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ocarina_of_Time2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Frog_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Frog_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Frog_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Frog_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Frog_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_D_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_F_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_G_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_H_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_M_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_O_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_P_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_V_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_W_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_D_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_F_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_G_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_H_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_M_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_O_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_P_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_V_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_W_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_D_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_F_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_G_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_H_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_M_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_O_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_P_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_V_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_W_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_D_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_F_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_G_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_H_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_M_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_O_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_P_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_V_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_W_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_D_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_F_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_G_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_H_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_M_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_O_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_P_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_V_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LG_W_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\awake.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\epona.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forest.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goron.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\half.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heal.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saria.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shadow.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soar.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soar1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spirit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sun.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\time.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time2x.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zelda.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_F_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_M_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_O_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_V_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_W_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_F_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_M_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_O_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_V_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_W_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_F_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_M_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_O_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_V_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_W_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_F_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_M_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_O_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_V_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_W_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_F_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_M_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_O_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_V_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_W_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_F_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_G_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_M_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_O_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_P_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_V_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_W_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_F_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_G_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_M_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_O_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_P_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_V_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_W_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_F_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_G_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_M_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_O_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_P_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_V_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_W_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_F_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_G_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_M_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_O_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_P_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_V_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_W_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_F_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_G_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_M_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_O_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_P_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_V_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_W_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_D_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_F_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_G_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_H_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_M_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_O_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_P_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_V_A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_D_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_F_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_G_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_H_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_M_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_O_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_P_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_V_B.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_D_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_F_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_G_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_H_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_M_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_O_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_P_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_V_D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_D_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_F_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_G_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_H_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_M_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_O_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_P_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_V_D2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_D_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_F_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_G_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_H_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_M_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_O_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_P_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_V_F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZSS_Secret.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Ruby_&amp;_Sapphire_-_Wild_Pokemon_Battle.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ocarina_of_Time_-_Medley.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70 - Requiem Of Spirit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66 - Prelude Of Light.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\63 - Serenade Of Water.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65 - Nocturne Of Shadow.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58 - Minuet Of Woods.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60 - Bolero Of Fire.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twilight_Princess_-_Midna%27s_Theme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twilight_Princess_-_Hidden_Village.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Wind_Waker_-_Dragon_Roost_Island.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Super_Mario_Sunshine_-_Delfino_Plaza.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Super_Mario_64_-_Bob-Omb_Battlefield.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smash_Bros_Melee_-_Temple.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smash_Bros_Melee_-_Rainbow_Cruise.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smash_Bros_Brawl_-_Melee_Theme_Remix.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Ruby_&amp;_Sapphire_-_Victory_Road.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Diamond_&amp;_Pearl_-_Wild_Pokemon_Battle.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Diamond_&amp;_Pearl_-_Team_Galaxy_Battle.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Diamond_&amp;_Pearl_-_Route_209.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Diamond_&amp;_Pearl_-_Dialga_&amp;_Palkia_Battle.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Blue_&amp;_Red_-_Route_1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Blue_&amp;_Red_-_Pokemon_Center.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon_Blue_&amp;_Red_-_Main_Theme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ocarina_of_Time_-_Song_of_Storms.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ocarina_of_Time_-_Gerudo_Valley.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mario_Kart_Double_Dash_-_Rainbow_Road.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Majora%27s_Mask_-_Termina_Field.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link_to_the_Past_-_Dark_World.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend_of_Zelda_II_-_Hyrule_Temple.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend_of_Zelda_-_Main_Theme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kirby_Super_Star_-_Gourmet_Race.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ocarina_of_Time2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
